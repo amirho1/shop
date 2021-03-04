@@ -10,7 +10,9 @@ export default function Slider() {
     return (
       <>
         <h1 className="top-five hover-under-line">Top five goods</h1>
+
         <div className="slider">
+
           <BsChevronLeft onClick={() => {
             if (pictureNumber === 0) {
               return setPictureNumber(4)
@@ -34,7 +36,7 @@ export default function Slider() {
           />
 
           <div className="point-for-number-of-slide">
-            {arr.map((item, index) => index === pictureNumber ? <div style={{ backgroundColor: "#7c52bf" }}></div> : <div></div>)}
+            {arr.map((item, index) => index === pictureNumber ? <div key={index} style={{ backgroundColor: "#7c52bf" }}></div> : <div key={index}></div>)}
           </div>
         </div>
       </>

@@ -24,10 +24,10 @@ export default function Footer() {
 
       <div className="footer-description">
         <p>
-          this site powered by: <bold><a className="text-purpel-underline" target="_blank" rel="noreferrer" href="https://reactjs.org/">React.js</a></bold><br />
-        developed by:  <bold><a className="text-purpel-underline" target="_blank" rel="noreferrer" href="https://github.com/amirho1"> AmirHossein Salighedar</a></bold><br />
+          this site powered by: <b><a className="text-purpel-underline" target="_blank" rel="noreferrer" href="https://reactjs.org/">React.js</a></b><br />
+        developed by:  <b><a className="text-purpel-underline" target="_blank" rel="noreferrer" href="https://github.com/amirho1"> AmirHossein Salighedar</a></b><br />
         this is a  shoping site that get
-        fake api from <bold><a className="text-purpel-underline" href="https://fakestoreapi.com/" target="_blank" rel="noreferrer">https://fakestoreapi.com/</a></bold>
+        fake api from <b><a className="text-purpel-underline" href="https://fakestoreapi.com/" target="_blank" rel="noreferrer">https://fakestoreapi.com/</a></b>
         </p>
       </div>
       <IconContext.Provider value={{ className: 'footer-icons' }}>

@@ -3,5 +3,12 @@
   display: block;
   padding: 2em;
   padding-top: 7em;
+  min-height: 600px;
+}
+
+@media only screen and (min-width: 798px) {
+  .main {
+    width: 70%;
+  }
 }
 /*# sourceMappingURL=Main.css.map */

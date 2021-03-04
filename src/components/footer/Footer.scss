@@ -19,14 +19,18 @@
 
 .footer-description {
   max-width: 300px;
-  text-align: justify;
+  text-align: start;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 6em auto;
+  background-color: var(--white);
+  border-radius: 0.5em;
+  padding: 3em;
 
   p {
+    color: var(--text);
     font-style: italic;
     line-height: 1.7em;
   }

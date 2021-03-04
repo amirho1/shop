@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import { BsFillBagFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 
+
 export default function Nav() {
   return (
     <nav>
       <input type="checkbox" name="nav" id="nav-check-box" className="display-none" />
+
       <ul className="nav-list ">
         <li className="nav-list-items">
           <Link className="hover-under-line" to="/">Home</Link>
@@ -24,9 +26,11 @@ export default function Nav() {
           </Link>
         </li>
       </ul>
+
       <label htmlFor="nav-check-box">
         <GiHamburgerMenu className="hamberger-menu" />
       </label>
+
       <h1 className="logo"  ><Link to="/">Logo</Link></h1>
     </nav >
   )
