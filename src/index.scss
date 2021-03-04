@@ -23,6 +23,15 @@ a {
   color: var(--text);
 }
 
+.text-purpel {
+  color: var(--purpel);
+}
+
+.text-purpel-underline {
+  color: var(--purpel);
+  text-decoration: underline;
+}
+
 body {
   font-family: "Montserrat", "vazir", -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
@@ -38,6 +47,10 @@ code {
 
 .display-none {
   display: none;
+}
+
+.hover-under-line {
+  position: relative;
 }
 
 .hover-under-line::after {

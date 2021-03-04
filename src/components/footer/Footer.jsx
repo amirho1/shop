@@ -12,21 +12,29 @@ export default function Footer() {
     <footer className="footer">
       <ul className="footer-list ">
         <li className="footer-list-items">
-          <Link to="/">Home</Link>
+          <Link className="hover-under-line" to="/">Home</Link>
         </li>
         <li className="footer-list-items">
-          <Link to="/shop">Shop</Link>
+          <Link className="hover-under-line" to="/shop">Shop</Link>
         </li>
         <li className="footer-list-items">
-          <Link to="/profile">Profile</Link>
+          <Link className="hover-under-line" to="/profile">Profile</Link>
         </li>
       </ul>
-      <img src={logo} alt="" className="react-logo" width="100" height="100" />
-      <IconContext.Provider value={{ color: 'white', className: 'footer-icons' }}>
-        <ul className="social-links">
+
+      <div className="footer-description">
+        <p>
+          this site powered by: <bold><a className="text-purpel-underline" target="_blank" rel="noreferrer" href="https://reactjs.org/">React.js</a></bold><br />
+        developed by:  <bold><a className="text-purpel-underline" target="_blank" rel="noreferrer" href="https://github.com/amirho1"> AmirHossein Salighedar</a></bold><br />
+        this is a  shoping site that get
+        fake api from <bold><a className="text-purpel-underline" href="https://fakestoreapi.com/" target="_blank" rel="noreferrer">https://fakestoreapi.com/</a></bold>
+        </p>
+      </div>
+      <IconContext.Provider value={{ className: 'footer-icons' }}>
+        <ul className="footer-social-links">
           <li><a target="_blank" rel="noreferrer" href="https://www.instagram.com/amirhosseinsalighedar/"><AiOutlineInstagram /></a></li>
-          <li><a href="https://reactjs.org/"><FaReact /></a></li>
-          <li><a href="https://github.com/amirho1"><AiOutlineGithub /></a></li>
+          <li><a target="_blank" rel="noreferrer" href="https://reactjs.org/"><FaReact /></a></li>
+          <li><a target="_blank" rel="noreferrer" href="https://github.com/amirho1"><AiOutlineGithub /></a></li>
         </ul>
       </IconContext.Provider>
 
