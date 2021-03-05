@@ -3,7 +3,6 @@ import { AiOutlineInstagram, AiOutlineGithub } from "react-icons/ai";
 import { FaReact } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import "./Footer.css";
-import logo from "./logo.svg";
 import { Link } from "react-router-dom";
 
 

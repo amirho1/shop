@@ -1,6 +1,5 @@
-import React, { useState, useEffect, createContext, useContext } from 'react'
+import React, { useState, createContext, useContext } from 'react'
 import useFetch from '../../hooks/useFetch'
-import Spiner from "../spiner/Spiner";
 
 const context = createContext();
 export let useProductContext = () => useContext(context);

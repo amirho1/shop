@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
 import Main from "../main/Main";
 import Aside from "../aside/Aside";
-import "./Container.css"
+import "./Container.css";
 import Footer from "../footer/Footer";
+
 
 export default function Container() {
   return (

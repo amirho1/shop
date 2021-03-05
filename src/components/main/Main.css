@@ -6,6 +6,10 @@
   min-height: 600px;
 }
 
+.top-of-shop {
+  border: 1px solid green;
+}
+
 @media only screen and (min-width: 798px) {
   .main {
     width: 70%;
