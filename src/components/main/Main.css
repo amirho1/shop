@@ -7,17 +7,12 @@
 }
 
 .top-of-shop {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 798px) {
   .main {
     width: 70%;
   }
-}
-/*# sourceMappingURL=Main.css.map */
+}/*# sourceMappingURL=Main.css.map */

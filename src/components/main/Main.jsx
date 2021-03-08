@@ -1,9 +1,12 @@
 import "./Main.css"
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Slider from "../slider/Slider";
 import { Switch, Route } from "react-router-dom";
 import Shop from "../shop/Shop";
 import DropDown from "../shop/drop-down/DropDown";
+import Signin from "../user/signin/Signin";
+
+
 
 
 export default function Main() {
@@ -22,17 +25,20 @@ export default function Main() {
         </Route>
 
         <Route path="/shop">
-
           <div className="top-of-shop">
             <DropDown changeCategory={changeCategory} />
           </div>
           <Shop category={category} />
         </Route>
+
         <Route path="/profile">
-          Profile
+          profile
         </Route>
         <Route path="/shop-cart">
           shop cart
+        </Route>
+        <Route path="/signin">
+          <Signin />
         </Route>
       </Switch>
     </main>

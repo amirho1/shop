@@ -1,0 +1,46 @@
+.signin-container {
+  border: 1px solid var(--gray);
+  padding: 2em;
+  max-width: 400px;
+  a {
+    font-weight: 700;
+  }
+}
+
+.label-signin {
+  display: block;
+  opacity: .7;
+}
+
+.signin-inputs {
+  width: 100%;
+  margin-top: .5em;
+}
+
+.input-container-signin {
+  position: relative;
+  padding: 1em 0;
+}
+
+.sign {
+  position: absolute;
+  right: 10px;
+  bottom: 22px;
+  color: var(--purpel);
+  font-size: 1.2em;
+  display: none;
+}
+
+.signin-danger-mark {
+  right: 30px;
+  color: #e40606;
+}
+
+.signin-and-up-button {
+  margin: 1em 0;
+  border: 1px solid var(--gray);
+  padding: 1em 1.2em;
+  color: white;
+  background-color: var(--dark-background);
+  cursor: pointer;
+}

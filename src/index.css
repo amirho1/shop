@@ -1,16 +1,14 @@
-@import url(/home/amirho/Desktop/workbench/shop/src/style/colors.css);
+@import "./style/colors.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,900;1,100;1,500;1,600;1,700;1,900&display=swap");
 :root {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 14px;
 }
 
 *,
 ::after,
 ::before {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
@@ -53,7 +51,6 @@ code {
 }
 
 .hover-under-line::after {
-  -webkit-transition: width 0.3s ease-in;
   transition: width 0.3s ease-in;
   content: " ";
   position: absolute;
@@ -73,8 +70,6 @@ code {
     font-size: 15px;
   }
 }
-
 .position-relative {
   position: relative;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

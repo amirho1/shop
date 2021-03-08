@@ -1,14 +1,6 @@
 .shop-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-/*# sourceMappingURL=Shop.css.map */
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}/*# sourceMappingURL=Shop.css.map */

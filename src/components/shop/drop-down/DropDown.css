@@ -3,36 +3,24 @@
   padding: 1em;
   color: white;
   border: 1px solid var(--gray);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   max-width: 300px;
   min-width: 300px;
   position: relative;
   cursor: pointer;
 }
-
 .drop-down-container:hover .categories-checkbox-container {
   height: 200px;
   padding: 1em 2em 2em;
 }
-
 .drop-down-container:hover .categories-arrow-down {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .categories-arrow-down {
-  -webkit-transition: -webkit-transform 0.3s linear;
-  transition: -webkit-transform 0.3s linear;
   transition: transform 0.3s linear;
-  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
   font-size: 1.2rem;
   cursor: pointer;
 }
@@ -46,18 +34,14 @@
   left: 0;
   color: white;
   z-index: 500;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   overflow: hidden;
 }
-
 .categories-checkbox-container li > * {
   margin-top: 1em;
   margin-left: 1em;
   display: inline-block;
 }
-
 .categories-checkbox-container li:nth-child(1) {
   margin-top: -1.5em;
-}
-/*# sourceMappingURL=DropDown.css.map */
+}/*# sourceMappingURL=DropDown.css.map */

@@ -1,15 +1,9 @@
 .spiner-container {
   width: 100%;
   min-height: 600px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .spiner {
@@ -25,15 +19,12 @@
 
 @-webkit-keyframes spiner {
   0% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes spiner {
   0% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-}
-/*# sourceMappingURL=Spiner.css.map */
+}/*# sourceMappingURL=Spiner.css.map */

@@ -11,18 +11,11 @@
   border: 1px solid var(--gray);
   width: 100%;
   height: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 0.4em;
-  -webkit-box-shadow: 5px 5px 10px 1px var(--gray);
-          box-shadow: 5px 5px 10px 1px var(--gray);
+  box-shadow: 5px 5px 10px 1px var(--gray);
   position: relative;
   max-width: 500px;
   margin: 2em auto 0 auto;
@@ -43,7 +36,6 @@
   height: 3em;
   opacity: 0.6;
 }
-
 .arrow:hover {
   opacity: 1;
 }
@@ -75,16 +67,10 @@
   height: 2em;
   position: absolute;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
-
 .point-for-number-of-slide > * {
   background-color: var(--dark-background);
   width: 10px;
@@ -96,5 +82,4 @@
   .slider {
     margin: 2em 0;
   }
-}
-/*# sourceMappingURL=Slider.css.map */
+}/*# sourceMappingURL=Slider.css.map */
