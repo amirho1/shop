@@ -11,10 +11,11 @@ import Signin from "../user/signin/Signin";
 
 export default function Main() {
   const [category, setCategory] = useState();
-
   const changeCategory = (value) => {
     setCategory(value)
   }
+
+
 
 
   return (

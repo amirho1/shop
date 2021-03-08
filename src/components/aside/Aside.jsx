@@ -8,7 +8,7 @@ export default function Aside({ user }) {
       <aside className="aside position-relative">
         <p className="position-relative">
           Welcome 
-        <Link className="links" to="/signin">join</Link> now or <Link className="links" to="">login</Link></p>
+          <Link className="links" to="/signin"> join</Link> now or <Link className="links" to=""> login</Link></p>
       </aside>
     )
   }

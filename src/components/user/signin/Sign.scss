@@ -2,6 +2,7 @@
   border: 1px solid var(--gray);
   padding: 2em;
   max-width: 400px;
+  margin: auto;
   a {
     font-weight: 700;
   }
@@ -12,9 +13,11 @@
   opacity: .7;
 }
 
+
 .signin-inputs {
   width: 100%;
   margin-top: .5em;
+  padding: 1em;
 }
 
 .input-container-signin {
@@ -25,7 +28,7 @@
 .sign {
   position: absolute;
   right: 10px;
-  bottom: 22px;
+  bottom: 29px;
   color: var(--purpel);
   font-size: 1.2em;
   display: none;
