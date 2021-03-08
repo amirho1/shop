@@ -1,4 +1,4 @@
-.signin-container {
+.singup-container {
   border: 1px solid var(--gray);
   padding: 2em;
   max-width: 400px;
@@ -8,19 +8,19 @@
   }
 }
 
-.label-signin {
+.label-singup {
   display: block;
   opacity: .7;
 }
 
 
-.signin-inputs {
+.singup-inputs {
   width: 100%;
   margin-top: .5em;
   padding: 1em;
 }
 
-.input-container-signin {
+.input-container-singup {
   position: relative;
   padding: 1em 0;
 }
@@ -34,12 +34,12 @@
   display: none;
 }
 
-.signin-danger-mark {
+.singup-danger-mark {
   right: 30px;
   color: #e40606;
 }
 
-.signin-and-up-button {
+.singup-and-up-button {
   margin: 1em 0;
   border: 1px solid var(--gray);
   padding: 1em 1.2em;

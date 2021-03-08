@@ -2,16 +2,17 @@ import Nav from "./components/nav/Nav";
 import Container from "./components/container/Container";
 import {
   BrowserRouter,
-  // Switch,
-  // Route,
 } from "react-router-dom";
+import UsersContext from "./components/contexts/UsersContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Nav />
-      <Container />
-    </BrowserRouter>
+    <UsersContext>
+      <BrowserRouter>
+        <Nav />
+        <Container />
+      </BrowserRouter>
+    </UsersContext>
   );
 }
 

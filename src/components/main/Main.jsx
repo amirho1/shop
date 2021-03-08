@@ -4,7 +4,7 @@ import Slider from "../slider/Slider";
 import { Switch, Route } from "react-router-dom";
 import Shop from "../shop/Shop";
 import DropDown from "../shop/drop-down/DropDown";
-import Signin from "../user/signin/Signin";
+import Signup from "../user/signup/Signup";
 
 
 
@@ -14,8 +14,6 @@ export default function Main() {
   const changeCategory = (value) => {
     setCategory(value)
   }
-
-
 
 
   return (
@@ -39,7 +37,7 @@ export default function Main() {
           shop cart
         </Route>
         <Route path="/signin">
-          <Signin />
+          <Signup />
         </Route>
       </Switch>
     </main>
