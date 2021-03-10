@@ -4,6 +4,12 @@
   max-width: 400px;
   margin: auto;
 }
+.singup-container p {
+  opacity: 0.8;
+}
+.singup-container h1 {
+  text-align: center;
+}
 .singup-container a {
   font-weight: 700;
 }
@@ -45,4 +51,7 @@
   color: white;
   background-color: var(--dark-background);
   cursor: pointer;
+}
+.singup-and-up-button:hover {
+  opacity: 0.9;
 }/*# sourceMappingURL=Signup.css.map */

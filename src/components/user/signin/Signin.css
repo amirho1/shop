@@ -1,0 +1,41 @@
+.signin-container {
+  width: 400px;
+  padding: 2em;
+  padding-top: 0;
+  border: 1px solid var(--gray);
+  margin: auto;
+}
+.signin-container p,
+.signin-container button {
+  margin-top: 1em;
+}
+.signin-container p {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+.signin-container h1 {
+  margin-top: 1em;
+  text-align: center;
+}
+.signin-container button {
+  padding: 1em 1.5em;
+  border: 1px solid var(--gray);
+  background-color: var(--dark-background);
+  color: white;
+  cursor: pointer;
+}
+.signin-container button:hover {
+  opacity: 0.9;
+}
+
+.signin-label {
+  display: block;
+  opacity: 0.7;
+  margin-top: 1em;
+}
+
+.signin-inputs {
+  width: 100%;
+  margin-top: 0.5em;
+  padding: 1em;
+}/*# sourceMappingURL=Signin.css.map */

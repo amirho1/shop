@@ -1,0 +1,22 @@
+.notification {
+  background-color: var(--purpel);
+  background-color: #b21515;
+  padding: 1em;
+  color: white;
+  margin-bottom: 2em;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+
+}
+
+.close-notification {
+  cursor: pointer;
+  position: absolute;
+  font-size: 1.4em;
+  right: 20px;
+}
+
+.close-notification:hover {
+  opacity: .5;
+}

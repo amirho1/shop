@@ -3,6 +3,13 @@
   padding: 2em;
   max-width: 400px;
   margin: auto;
+  p {
+    opacity: 0.8;
+  }
+  h1 {
+    text-align: center;
+  }
+
   a {
     font-weight: 700;
   }
@@ -10,13 +17,12 @@
 
 .label-singup {
   display: block;
-  opacity: .7;
+  opacity: 0.7;
 }
-
 
 .singup-inputs {
   width: 100%;
-  margin-top: .5em;
+  margin-top: 0.5em;
   padding: 1em;
 }
 
@@ -46,4 +52,7 @@
   color: white;
   background-color: var(--dark-background);
   cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
 }

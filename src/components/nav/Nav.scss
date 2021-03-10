@@ -1,7 +1,6 @@
 @import "../../style/colors.css";
 
 nav {
-  height: 4.5em;
   border-bottom: 1px solid var(--gray);
   display: flex;
   position: fixed;
@@ -29,11 +28,11 @@ nav {
 
 .nav-list {
   position: absolute;
-  top: 101%;
+  top: 102%;
   width: 100%;
   max-height: 0px;
-  overflow: hidden;
   background-color: white;
+  overflow: hidden;
   transition: max-height 0.3s ease-in;
   z-index: 1000;
 }
@@ -42,7 +41,7 @@ nav {
   border-bottom: 1px solid var(--gray);
   a {
     font-weight: bold;
-    padding: 2em 0 2em 3em;
+    padding: 1em 0 1em 3em;
     font-size: 1.2rem;
     transition: padding 0.3s ease-in;
     width: 100%;
@@ -55,7 +54,39 @@ nav {
 }
 
 #nav-check-box:checked ~ .nav-list {
-  max-height: 400px;
+  max-height: 360px;
+}
+
+.signup-signin-nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    text-align: left;
+    padding-left: 0;
+  }
+  a:first-child {
+    text-align: right;
+  }
+
+  a:hover {
+    padding-left: 0;
+  }
+}
+
+.items-in-cart {
+  position: absolute;
+  background-color: var(--purpel);
+  color: white;
+  padding: 0.2em 0.3em;
+  border-radius: 0.2em;
+  display: flex;
+  left: 4em;
+  top: 20px;
+}
+
+.cart-nav {
+  position: relative;
 }
 
 @media only screen and (min-width: 797px) {
@@ -95,5 +126,13 @@ nav {
         padding-left: 1.2em;
       }
     }
+  }
+  .signup-signin-nav-item {
+    display: none;
+  }
+
+  .items-in-cart {
+    left: 5.3em;
+    top: 30px;
   }
 }
