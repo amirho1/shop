@@ -1,20 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import "./Card.css";
 import { GrClose } from "react-icons/gr";
+import { useUserContext } from "../../contexts/UsersContext";
 
 export default function Card({ product }) {
-  const [backfaceStyle, setBackfaceStyle] = useState({ display: "none", state: 0 })
+  const { addToCart } = useUserContext();
+
+  const [backfaceStyle, setBackfaceStyle] = useState({
+    display: "none",
+    state: 0,
+  });
 
   const makeVisibleOrHiddenBackface = () => {
-    if (!backfaceStyle.state) return setBackfaceStyle({ display: "block", state: 1 });
-    setBackfaceStyle({ display: "none", state: 0, });
-  }
+    if (!backfaceStyle.state)
+      return setBackfaceStyle({ display: "block", state: 1 });
+    setBackfaceStyle({ display: "none", state: 0 });
+  };
 
   return (
     <div className="card-container">
-
       <div className="details" style={{ display: backfaceStyle.display }}>
-        <GrClose className="close-back-face" onClick={makeVisibleOrHiddenBackface} />
+        <GrClose
+          className="close-back-face"
+          onClick={makeVisibleOrHiddenBackface}
+        />
 
         <div className="price-title">
           <h3 className="title">{product.title}</h3>
@@ -32,11 +41,19 @@ export default function Card({ product }) {
       <div className="fade-all-container"></div>
 
       <div className="card-top-section">
-        <button className="view-detail card-button" onClick={makeVisibleOrHiddenBackface}>
+        <button
+          className="view-detail card-button"
+          onClick={makeVisibleOrHiddenBackface}
+        >
           VIEW DETAIL
         </button>
 
-        <button className="card-add card-button">ADD TO CART</button>
+        <button
+          className="card-add card-button"
+          onClick={() => addToCart(product)}
+        >
+          ADD TO CART
+        </button>
         <img src={product.image} alt={product.title} className="card-image" />
       </div>
 
@@ -46,6 +63,6 @@ export default function Card({ product }) {
           <h4 className="card-price text-purpel">{product.price}$</h4>
         </div>
       </div>
-    </div >
-  )
+    </div>
+  );
 }

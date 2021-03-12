@@ -3,8 +3,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BsFillBagFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useUserContext } from "../contexts/UsersContext";
 
 export default function Nav() {
+  const { whoIsLogin, setWhoIsLogin, cartItemNumber } = useUserContext();
   return (
     <nav>
       <input
@@ -25,25 +27,42 @@ export default function Nav() {
             Shop
           </Link>
         </li>
+
         <li className="nav-list-items">
-          <Link className="hover-under-line" to="/profile">
-            Profile
-          </Link>
-        </li>
-        <li className="nav-list-items">
-          <Link className="hover-under-line cart-nav" to="/shop-cart">
+          <Link className="hover-under-line cart-nav" to="/profile">
             <BsFillBagFill className="shop-cart" />
-            <div className="items-in-cart">0</div>
+            <div className="items-in-cart">
+              {whoIsLogin ? cartItemNumber : 0}
+            </div>
           </Link>
         </li>
 
         <li className="nav-list-items signup-signin-nav-item">
-          <Link className="hover-under-line" to="/signin">
+          <Link
+            className="hover-under-line"
+            to="/signin"
+            style={{
+              display: !whoIsLogin ? "block" : "none",
+            }}
+          >
             Signin
           </Link>
-          <b>/</b>
+
           <Link className="hover-under-line" to="/signup">
             Signup
+          </Link>
+          <Link
+            to="/signin"
+            className="hover-under-line"
+            onClick={() => {
+              setWhoIsLogin(undefined);
+            }}
+            style={{
+              display: !whoIsLogin ? "none" : "block",
+              color: "#7c52bf",
+            }}
+          >
+            Exit
           </Link>
         </li>
       </ul>

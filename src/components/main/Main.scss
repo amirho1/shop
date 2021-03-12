@@ -1,7 +1,6 @@
 .main {
   width: 100%;
   display: block;
-  padding: 2em;
   padding-top: 7em;
   min-height: 600px;
 }
@@ -9,4 +8,10 @@
 .top-of-shop {
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (min-width: 798px) {
+  .top-of-shop {
+    justify-content: initial;
+  }
 }

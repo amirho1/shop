@@ -1,0 +1,7 @@
+.delete-cart-item {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.delete-cart-item:hover {
+  opacity: 0.8;
+}/*# sourceMappingURL=ItemInCart.css.map */

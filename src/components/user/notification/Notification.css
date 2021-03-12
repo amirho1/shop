@@ -6,7 +6,10 @@
   margin-bottom: 2em;
   text-align: center;
   font-weight: 600;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 4.7em;
+  z-index: 1000;
 }
 
 .close-notification {

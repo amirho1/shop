@@ -48,9 +48,6 @@ nav {
   height: 100%;
   display: block;
 }
-.nav-list-items a:hover {
-  padding-left: 4em;
-}
 
 #nav-check-box:checked ~ .nav-list {
   max-height: 360px;
@@ -60,13 +57,10 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .signup-signin-nav-item a {
-  text-align: left;
   padding-left: 0;
-}
-.signup-signin-nav-item a:first-child {
-  text-align: right;
 }
 .signup-signin-nav-item a:hover {
   padding-left: 0;
@@ -76,11 +70,13 @@ nav {
   position: absolute;
   background-color: var(--purpel);
   color: white;
-  padding: 0.2em 0.3em;
+  width: 20px;
+  padding: 2px;
   border-radius: 0.2em;
   display: flex;
-  left: 4em;
-  top: 20px;
+  justify-content: center;
+  right: 20px;
+  top: 15px;
 }
 
 .cart-nav {
@@ -98,7 +94,7 @@ nav {
     position: initial;
     max-height: initial;
     top: 0;
-    width: 50%;
+    width: 80%;
     height: 100%;
     overflow: initial;
     transition: max-height 0.3s ease-in;
@@ -124,12 +120,18 @@ nav {
     padding-left: 1.2em;
   }
 
-  .signup-signin-nav-item {
-    display: none;
-  }
-
   .items-in-cart {
-    left: 5.3em;
+    left: 60%;
     top: 30px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .nav-list {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .nav-list {
+    width: 50%;
   }
 }/*# sourceMappingURL=Nav.css.map */

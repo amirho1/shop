@@ -7,9 +7,19 @@ import DropDown from "../shop/drop-down/DropDown";
 import Signup from "../user/signup/Signup";
 import Notification from "../user/notification/Notification";
 import Signin from "../user/signin/Signin";
+import Profile from "../profile/Profile";
+import { useUserContext } from "../contexts/UsersContext";
+import PrivateRoute from "../privateRoute/PrivateRoute";
 
 export default function Main() {
   const [category, setCategory] = useState();
+
+  const {
+    userCreatedState,
+    loginState,
+    addToCartNotification,
+    changeShopNotificationDisplay,
+  } = useUserContext();
 
   const changeCategory = (value) => {
     setCategory(value);
@@ -18,6 +28,7 @@ export default function Main() {
   const [singupNotificationDisplay, setSingupNotificationDisplay] = useState(
     false
   );
+  const [siginNotification, setSigninNotification] = useState(false);
 
   return (
     <>
@@ -28,19 +39,25 @@ export default function Main() {
           </Route>
 
           <Route path="/shop">
+            <Notification
+              setNotificationDisplay={changeShopNotificationDisplay}
+              display={addToCartNotification.display ? "block" : "none"}
+              state={addToCartNotification}
+            />
+
             <div className="top-of-shop">
-              <DropDown changeCategory={changeCategory} />
+              <DropDown changeCategory={changeCategory} className="dropdown" />
             </div>
             <Shop category={category} />
           </Route>
-
-          <Route path="/shop-cart">shop cart</Route>
 
           <Route path="/signup">
             <Notification
               setNotificationDisplay={setSingupNotificationDisplay}
               display={singupNotificationDisplay ? "block" : "none"}
+              state={userCreatedState}
             />
+
             <Signup setNotificationDisplay={setSingupNotificationDisplay} />
           </Route>
 
@@ -48,9 +65,26 @@ export default function Main() {
             <Notification
               setNotificationDisplay={setSingupNotificationDisplay}
               display={singupNotificationDisplay ? "block" : "none"}
+              state={userCreatedState}
             />
-            <Signin />
+
+            <Notification
+              setNotificationDisplay={setSigninNotification}
+              display={siginNotification ? "block" : "none"}
+              state={loginState}
+            />
+
+            <Signin setNotificationDisplay={setSigninNotification} />
           </Route>
+          <PrivateRoute path="/profile" where="/signin">
+            <Notification
+              setNotificationDisplay={setSigninNotification}
+              display={siginNotification ? "block" : "none"}
+              state={loginState}
+            />
+
+            <Profile />
+          </PrivateRoute>
         </Switch>
       </main>
     </>

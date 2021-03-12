@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { CgDanger } from "react-icons/cg";
 import { IoMdCheckmarkCircle } from "react-icons/io";
 import "./Signup.css";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { useUserContext } from "../../contexts/UsersContext";
+import { validateEmail } from "../../../functinos/validateEmail";
 
 export default function Signup({ setNotificationDisplay }) {
+  const { setSignupRedirectState, signupRedirectState } = useUserContext();
+
   const getValue = (whichOne, value) => {
     setUserInformation((currentValue) => ({
       ...currentValue,
@@ -14,11 +17,6 @@ export default function Signup({ setNotificationDisplay }) {
   };
 
   const validateByLength = (value, length = 4) => value.length >= length;
-
-  const validateEmail = (email) => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  };
 
   const [userInformation, setUserInformation] = useState({
     name: "",
@@ -30,7 +28,7 @@ export default function Signup({ setNotificationDisplay }) {
         validateByLength(this.name, 4) &&
         validateEmail(this.email) &&
         validateByLength(this.password, 8) &&
-        validateRepeatedPassword(this.password2)
+        this.password === this.password2
       );
     },
   });
@@ -52,6 +50,11 @@ export default function Signup({ setNotificationDisplay }) {
 
   const validateRepeatedPassword = (value) =>
     value && value === userInformation.password;
+
+  if (signupRedirectState) {
+    setSignupRedirectState(false);
+    return <Redirect to="/signin" />;
+  }
 
   return (
     <div className="singup-container">
@@ -124,6 +127,7 @@ export default function Signup({ setNotificationDisplay }) {
           <label className="label-singup" htmlFor="password">
             Password:
           </label>
+
           <input
             required
             value={userInformation.password}
@@ -190,9 +194,9 @@ export default function Signup({ setNotificationDisplay }) {
         <input type="submit" value="Singin" className="singup-and-up-button" />
 
         <p>
-          If you don't have any account you can{" "}
-          <Link to="signupp" className="text-purpel hover-under-line">
-            Signup
+          If you don't have any account you can
+          <Link to="signin" className="text-purpel hover-under-line">
+            {" Singin. "}
           </Link>
         </p>
       </form>
