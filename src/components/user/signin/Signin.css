@@ -4,6 +4,7 @@
   padding-top: 0;
   border: 1px solid var(--gray);
   margin: auto;
+  margin-top: 3em;
 }
 .signin-container p,
 .signin-container button {

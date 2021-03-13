@@ -4,7 +4,7 @@ import { useUserContext } from "../../contexts/UsersContext";
 import ItemInCart from "./itemInCart/ItemInCart";
 
 export default function Cart() {
-  const { users, whoIsLogin, deleteCartItem } = useUserContext();
+  const { users, whoIsLogin, deleteCartItem, buyCartItems } = useUserContext();
   const cart = users.filter((user) => user.name === whoIsLogin)[0].cart;
 
   return (
@@ -34,7 +34,7 @@ export default function Cart() {
         </tbody>
       </table>
       <div className="cart-footer">
-        <button>Buy</button>
+        <button onClick={() => buyCartItems()}>Buy</button>
         <p className="total-price bold-700">
           Total:{" "}
           {cart.length

@@ -127,6 +127,13 @@ export default function UsersContext({ children }) {
     });
   }
 
+  function buyCartItems() {
+    const userIndex = users.findIndex((user) => user.name === whoIsLogin);
+    const newUsers = [...users];
+    newUsers[userIndex].cart = [];
+    setUsers(newUsers);
+  }
+
   const deleteCartItem = (itemIndex) => {
     const userIndex = users.findIndex((user) => user.name === whoIsLogin);
     const newUsers = [...users];
@@ -159,6 +166,7 @@ export default function UsersContext({ children }) {
         changeShopNotificationDisplay,
         setUserCreatedState,
         deleteCartItem,
+        buyCartItems,
       }}
     >
       {children}

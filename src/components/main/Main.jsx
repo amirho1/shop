@@ -10,6 +10,7 @@ import Signin from "../user/signin/Signin";
 import Profile from "../profile/Profile";
 import { useUserContext } from "../contexts/UsersContext";
 import PrivateRoute from "../privateRoute/PrivateRoute";
+import Home from "../home/Home";
 
 export default function Main() {
   const [category, setCategory] = useState();
@@ -35,6 +36,7 @@ export default function Main() {
       <main className="main">
         <Switch>
           <Route path="/" exact>
+            <Home />
             <Slider />
           </Route>
 

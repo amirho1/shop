@@ -1,3 +1,7 @@
+.slider-container {
+  padding: 4em;
+}
+
 .top-five {
   color: var(--purpel);
   cursor: pointer;
